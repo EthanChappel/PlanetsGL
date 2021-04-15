@@ -113,82 +113,82 @@ void display(void)
 	shader.SetUniform("surfaceEmissive", glm::vec4(0.0, 0.0, 0.0, 1.0));
 
 	mercuryTrans = sunTrans * glm::rotate(mercuryAngle += 0.15f, 0.0f, 1.0f, 0.0f) * glm::translate(2.0f, 0.0f, 0.0f) * glm::scale(0.1f, 0.1f, 0.1f) * glm::scale(0.1f, 0.1f, 0.1f) * glm::rotate(25.0f, 1.0f, 0.0f, 1.0f);
-	sphere->render(view * mercuryTrans, projection); // Render the cube in another spot
+	sphere->render(view * mercuryTrans, projection);
 
 	venusTrans = sunTrans * glm::rotate(venusAngle += 0.09f, 0.0f, 1.0f, 0.0f) * glm::translate(2.67f, 0.0f, 0.0f) * glm::scale(0.1f, 0.1f, 0.1f) * glm::scale(0.3f, 0.3f, 0.3f) * glm::rotate(25.0f, 1.0f, 0.0f, 1.0f);
-	sphere->render(view * venusTrans, projection); // Render the cube in another spot
+	sphere->render(view * venusTrans, projection);
 	
 	earthTrans = sunTrans * glm::rotate(earthAngle += 0.09f, 0.0f, 1.0f, 0.0f) * glm::translate(4.0f, 0.0f, 0.0f) * glm::scale(0.1f, 0.1f, 0.1f) * glm::scale(0.3f, 0.3f, 0.3f) * glm::rotate(25.0f, 1.0f, 0.0f, 1.0f);
-	sphere->render(view * earthTrans, projection); // Render the cube in another spot
+	sphere->render(view * earthTrans, projection);
 
 	moonTrans = earthTrans * glm::rotate(-18.0f, 1.0f, 0.0f, 0.0f) * glm::rotate(moonAngle += 0.18f, 0.0f, 1.0f, 0.0f) * glm::translate(8.0f, 0.0f, 0.0f) * glm::scale(0.1f, 0.1f, 0.1f) * glm::scale(1.1f, 1.1f, 1.1f) * glm::rotate(5.0f, 1.0f, 0.0f, 1.0f);
-	sphere->render(view * moonTrans, projection); // Render the cube in another spot
+	sphere->render(view * moonTrans, projection);
 	
 	marsTrans = sunTrans * glm::rotate(marsAngle += 0.04f, 0.0f, 1.0f, 0.0f) * glm::translate(6.0f, 0.0f, 0.0f) * glm::scale(0.1f, 0.1f, 0.1f) * glm::scale(0.15f, 0.15f, 0.15f) * glm::rotate(25.0f, 1.0f, 0.0f, 1.0f);
-	sphere->render(view * marsTrans, projection); // Render the cube in another spot
+	sphere->render(view * marsTrans, projection);
 
 	jupTrans = sunTrans * glm::rotate(jupAngle += 0.02f, 0.0f, 1.0f, 0.0f)  * glm::translate(10.0f, 0.0f, 0.0f) * glm::scale(0.1f, 0.1f, 0.1f) * glm::scale(1.0f, 0.94f, 1.0f) * glm::rotate(3.1f, 1.0f, 0.0f, 1.0f);
-	sphere->render(view * jupTrans, projection); // Render the cube in another spot
+	sphere->render(view * jupTrans, projection);
 
 	ioTrans = jupTrans * glm::rotate(ioAngle += 0.2f, 0.0f, 1.0f, 0.0f) * glm::translate(5.0f, 0.0f, 0.0f) * glm::scale(0.08f, 0.08f, 0.08f);
-	sphere->render(view * ioTrans, projection); // Render the cube in another spot
+	sphere->render(view * ioTrans, projection);
 	
 	eurTrans = jupTrans * glm::rotate(eurAngle += 0.1f, 0.0f, 1.0f, 0.0f) * glm::translate(7.5f, 0.0f, 0.0f) * glm::scale(0.07f, 0.07f, 0.07f);
-	sphere->render(view * eurTrans, projection); // Render the cube in another spot
+	sphere->render(view * eurTrans, projection);
 
 	ganTrans = jupTrans * glm::rotate(ganAngle += 0.05f, 0.0f, 1.0f, 0.0f) * glm::translate(11.25f, 0.0f, 0.0f) * glm::scale(0.12f, 0.12f, 0.12f);
-	sphere->render(view * ganTrans, projection); // Render the cube in another spot
+	sphere->render(view * ganTrans, projection);
 
 	calTrans = jupTrans * glm::rotate(calAngle += 0.0173f, 0.0f, 1.0f, 0.0f) * glm::translate(18.0f, 0.0f, 0.0f) * glm::scale(0.11f, 0.11f, 0.11f);
-	sphere->render(view * calTrans, projection); // Render the cube in another spot
+	sphere->render(view * calTrans, projection);
 
 	satTrans = sunTrans * glm::rotate(satAngle += 0.008f, 0.0f, 1.0f, 0.0f) * glm::translate(20.0f, 0.0f, 0.0f) * glm::scale(0.085f, 0.085f, 0.085f) * glm::scale(1.0f, 0.9f, 1.0f) * glm::rotate(25.0f, 1.0f, 0.0f, 1.0f);
-	sphere->render(view * satTrans, projection); // Render the cube in another spot
+	sphere->render(view * satTrans, projection);
 
 	mimasTrans = satTrans * glm::rotate(mimasAngle += 0.15f, 0.0f, 1.0f, 0.0f) * glm::translate(6.0f, 0.0f, 0.0f) * glm::scale(0.03f, 0.03f, 0.03f);
-	sphere->render(view * mimasTrans, projection); // Render the cube in another spot
+	sphere->render(view * mimasTrans, projection);
 
 	enceladusTrans = satTrans * glm::rotate(enceladusAngle += 0.12f, 0.0f, 1.0f, 0.0f) * glm::translate(8.0f, 0.0f, 0.0f) * glm::scale(0.035f, 0.035f, 0.035f);
-	sphere->render(view * enceladusTrans, projection); // Render the cube in another spot
+	sphere->render(view * enceladusTrans, projection);
 
 	tethysTrans = satTrans * glm::rotate(tethysAngle += 0.09f, 0.0f, 1.0f, 0.0f) * glm::translate(10.0f, 0.0f, 0.0f) * glm::scale(0.05f, 0.05f, 0.05f);
-	sphere->render(view * tethysTrans, projection); // Render the cube in another spot
+	sphere->render(view * tethysTrans, projection);
 
 	dioneTrans = satTrans * glm::rotate(dioneAngle += 0.06f, 0.0f, 1.0f, 0.0f) * glm::translate(16.0f, 0.0f, 0.0f) * glm::scale(0.05f, 0.05f, 0.05f);
-	sphere->render(view * dioneTrans, projection); // Render the cube in another spot
+	sphere->render(view * dioneTrans, projection);
 
 	rheaTrans = satTrans * glm::rotate(rheaAngle += 0.03f, 0.0f, 1.0f, 0.0f) * glm::translate(20.0f, 0.0f, 0.0f) * glm::scale(0.06f, 0.06f, 0.06f);
-	sphere->render(view * rheaTrans, projection); // Render the cube in another spot
+	sphere->render(view * rheaTrans, projection);
 
 	titanTrans = satTrans * glm::rotate(titanAngle += 0.01f, 0.0f, 1.0f, 0.0f) * glm::translate(30.0f, 0.0f, 0.0f) * glm::scale(0.11f, 0.11f, 0.11f);
-	sphere->render(view * titanTrans, projection); // Render the cube in another spot
+	sphere->render(view * titanTrans, projection);
 
 	iapetusTrans = satTrans * glm::rotate(-8.0f, 1.0f, 0.0f, 0.0f) * glm::rotate(iapetusAngle += 0.003f, 0.0f, 1.0f, 0.0f) * glm::translate(90.0f, 0.0f, 0.0f) * glm::scale(0.06f, 0.06f, 0.06f);
-	sphere->render(view * iapetusTrans, projection); // Render the cube in another spot
+	sphere->render(view * iapetusTrans, projection);
 
 	uraTrans = sunTrans * glm::rotate(uraAngle += 0.002f, 0.0f, 1.0f, 0.0f) * glm::translate(40.0f, 0.0f, 0.0f) * glm::scale(0.1f, 0.096f, 0.1f)  * glm::rotate(98.0f, 1.0f, 0.0f, 1.0f);
-	sphere->render(view * uraTrans, projection); // Render the cube in another spot
+	sphere->render(view * uraTrans, projection);
 
 	mirandaTrans = uraTrans * glm::rotate(mirandaAngle += 0.2f, 0.0f, 1.0f, 0.0f) * glm::translate(4.0f, 0.0f, 0.0f) * glm::scale(0.05f, 0.05f, 0.05f);
-	sphere->render(view * mirandaTrans, projection); // Render the cube in another spot
+	sphere->render(view * mirandaTrans, projection);
 
 	arielTrans = uraTrans * glm::rotate(arielAngle += 0.13f, 0.0f, 1.0f, 0.0f) * glm::translate(7.0f, 0.0f, 0.0f) * glm::scale(0.06f, 0.06f, 0.06f);
-	sphere->render(view * arielTrans, projection); // Render the cube in another spot
+	sphere->render(view * arielTrans, projection);
 
 	umbrielTrans = uraTrans * glm::rotate(umbrielAngle += 0.056f, 0.0f, 1.0f, 0.0f) * glm::translate(10.0f, 0.0f, 0.0f) * glm::scale(0.06f, 0.06f, 0.06f);
-	sphere->render(view * umbrielTrans, projection); // Render the cube in another spot
+	sphere->render(view * umbrielTrans, projection);
 
 	titaniaTrans = uraTrans * glm::rotate(titaniaAngle += 0.0272f, 0.0f, 1.0f, 0.0f) * glm::translate(14.0f, 0.0f, 0.0f) * glm::scale(0.1f, 0.1f, 0.1f);
-	sphere->render(view * titaniaTrans, projection); // Render the cube in another spot
+	sphere->render(view * titaniaTrans, projection);
 
 	oberonTrans = uraTrans * glm::rotate(oberonAngle += 0.0135f, 0.0f, 1.0f, 0.0f) * glm::translate(18.0f, 0.0f, 0.0f) * glm::scale(0.09f, 0.09f, 0.09f);
-	sphere->render(view * oberonTrans, projection); // Render the cube in another spot
+	sphere->render(view * oberonTrans, projection);
 
 	nepTrans = sunTrans * glm::rotate(nepAngle += 0.001f, 0.0f, 1.0f, 0.0f) * glm::translate(60.0f, 0.0f, 0.0f) * glm::scale(0.1f, 0.1f, 0.1f) * glm::rotate(29.0f, 1.0f, 0.0f, 1.0f);;
-	sphere->render(view * nepTrans, projection); // Render the cube in another spot
+	sphere->render(view * nepTrans, projection);
 
 	tritonTrans = nepTrans * glm::rotate(tritonAngle -= 0.1f, 0.0f, 1.0f, 0.0f) * glm::translate(10.0f, 0.0f, 0.0f) * glm::scale(0.1f, 0.1f, 0.1f);
-	sphere->render(view * tritonTrans, projection); // Render the cube in another spot
+	sphere->render(view * tritonTrans, projection);
 
 	shader.DeActivate(); // Unbind shader.
 	
